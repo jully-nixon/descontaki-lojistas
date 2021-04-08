@@ -1,0 +1,51 @@
+.register {
+	text-align: center;
+}
+.register--content form {
+	display: inline-grid;
+}
+.register--logo {
+	width: 150px;
+	height: 150px;
+	margin-top: 10px;
+}
+.register--title {
+	color: #dad8d8;
+	font-size: 30px;
+    justify-content: center;
+}
+
+.register--content input {
+	width: 250px;
+	height: 40px;
+	border: none;
+	border-radius: 4px;
+	padding: 0 0 0 20px;
+	margin: 4px 0 0 0;
+	color: rgb(54, 53, 53);
+	background-color: #dad8d8;
+}
+
+.register--button div {
+	display: flex;
+	text-align: center;
+	justify-content: center;
+}
+
+.register--button button {
+	font-size: 20px;
+	width: 180px;
+	height: 40px;
+	color: #fff;
+	background-color: #fa4505;
+	border: none;
+	border-radius: 4px;
+	margin: 30px 0 50px 0;
+}
+.register--toGoBack {
+	font-size: 40px !important;
+	color: #dad8d8;
+	display: flex !important;
+	margin: 50px 0 0 40px;
+	position: absolute;
+}
