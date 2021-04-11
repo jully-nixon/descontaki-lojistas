@@ -1,0 +1,17 @@
+.login {
+	text-align: center;
+}
+.login--content {
+	display: inline-grid;
+}
+.login--title {
+	color: #dad8d8;
+	font-size: 30px;
+	justify-content: center;
+}
+.login--forgotPassword,
+.login--register {
+	color: #dad8d8;
+	margin: 20px 0 0 0;
+	font-size: 16px;
+}
