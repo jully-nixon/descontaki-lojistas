@@ -13,7 +13,7 @@ const initialFormState = {
     confirmarSenha: ''
 }
 
-export default () => {
+export default function Register() {
     let formData = [];
 
     const [form, setForm] = useState(initialFormState);
@@ -23,7 +23,9 @@ export default () => {
     }
 
     const submitForm = () => {
-        formData = JSON.parse(localStorage.getItem('formData'));
+        if (localStorage.getItem('formData') != null) {
+            formData = JSON.parse(localStorage.getItem('formData'));
+        }
         formData.push(form);
         localStorage.setItem('formData', JSON.stringify(formData));
         document.getElementById("newRegister").reset();
@@ -35,12 +37,12 @@ export default () => {
                 <ArrowBackIosIcon className="register--toGoBack" />
             </Link>
 
-            <img className="register--logo" src={logo} />
+            <img className="register--logo" src={logo}  alt="Logo"/>
             <h1 className="register--title">Novo Registro</h1>
             <hr />
 
             <div className="register--content">
-                <form id="newRegister">
+                <form id="newRegister" method="POST">
                     <input
                         name="cnpj"
                         type="text"
@@ -86,7 +88,7 @@ export default () => {
             </div>
 
             <div className="register--button">
-                <button onClick={submitForm}>Criar</button>
+                <button onClick={submitForm} disabled={initialFormState}>Criar</button>
             </div>
         </div>
     )

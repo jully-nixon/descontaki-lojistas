@@ -1,11 +1,15 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import './App.css';
+import Routes from './routes';
+import { BrowserRouter } from 'react-router-dom';
 
-export default () => {
+export default function App() {
 
   return (
     <div>
-      Descontaki Lojistas
+      <BrowserRouter>
+      <Routes />
+      </BrowserRouter>
     </div>
   )
 }

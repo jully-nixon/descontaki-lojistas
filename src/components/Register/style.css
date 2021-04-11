@@ -12,7 +12,7 @@
 .register--title {
 	color: #dad8d8;
 	font-size: 30px;
-    justify-content: center;
+	justify-content: center;
 }
 
 .register--content input {
@@ -49,3 +49,4 @@
 	margin: 50px 0 0 40px;
 	position: absolute;
 }
+
