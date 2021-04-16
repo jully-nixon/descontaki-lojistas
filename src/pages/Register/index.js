@@ -4,6 +4,8 @@ import logo from '../../images/logo.png';
 import { Link } from 'react-router-dom';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import Image from '../../components/Image';
+import Input from '../../components/Input';
+import Button from '../../components/Button';
 
 const initialFormState = {
     cnpj: '',
@@ -38,58 +40,58 @@ export default function Register() {
                 <ArrowBackIosIcon className="register--toGoBack" />
             </Link>
 
-            <Image src={logo}  alt="Logo"/>
+            <Image src={logo} alt="Logo" />
             <h1 className="register--title">Novo Registro</h1>
             <hr />
 
             <div className="register--content">
                 <form id="newRegister" method="POST">
-                    <input
+                    <Input
                         name="cnpj"
                         type="text"
                         placeholder="CNPJ"
-                        onChange={e => setInput({ cnpj: e.target.value })}
+                        handlerInput={e => setInput({ cnpj: e.target.value })}
                     />
 
-                    <input
+                    <Input
                         name="razãoSocial"
                         type="text"
                         placeholder="Razão Social"
-                        onChange={e => setInput({ razaoSocial: e.target.value })}
+                        handlerInput={e => setInput({ razaoSocial: e.target.value })}
                     />
 
-                    <input
+                    <Input
                         name="nomeFantasia"
                         type="text"
                         placeholder="Nome Fantasia"
-                        onChange={e => setInput({ nomeFantasia: e.target.value })}
+                        handlerInput={e => setInput({ nomeFantasia: e.target.value })}
                     />
 
-                    <input
+                    <Input
                         name="email"
                         type="text"
                         placeholder="Email"
-                        onChange={e => setInput({ email: e.target.value })}
+                        handlerInput={e => setInput({ email: e.target.value })}
                     />
 
-                    <input
+                    <Input
                         name="senha"
                         type="password"
                         placeholder="Senha"
-                        onChange={e => setInput({ senha: e.target.value })}
+                        handlerInput={e => setInput({ senha: e.target.value })}
                     />
 
-                    <input
+                    <Input
                         name="confirmarSenha"
                         type="password"
                         placeholder="Confirmar Senha"
-                        onChange={e => setInput({ confirmarSenha: e.target.value })}
+                        handlerInput={e => setInput({ confirmarSenha: e.target.value })}
                     />
                 </form>
             </div>
 
             <div className="register--button">
-                <button onClick={submitForm} disabled={initialFormState}>Criar</button>
+                <Button handlerButton={submitForm} disabled={initialFormState} title="Criar" />
             </div>
         </div>
     )
