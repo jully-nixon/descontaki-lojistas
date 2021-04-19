@@ -4,7 +4,7 @@ import { MyButton } from './style';
 export default function Button(props) {
     return (
         <>
-            <MyButton onClick={props.handlerButton}>{props.title}</MyButton>
+            <MyButton onClick={props.handlerButton} disabled={props.disabled}>{props.title}</MyButton>
         </>
     );
 }

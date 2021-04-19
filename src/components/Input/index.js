@@ -1,10 +1,12 @@
-import React from 'react';
-import { MyInput } from './style';
+import React, { useState } from 'react';
+import { MyInput, Span } from './style';
 
-export default function Input(props) {
+export default function Input({ error, ...rest }) {
+    const [touched, setTouched] = useState(false);
     return (
         <>
-            <MyInput onChange={props.handlerInput} type={props.type} placeholder={props.placeholder} />
+            <MyInput  {...rest} onBlur={() => setTouched(true)}  />
+            <Span>{touched && error}</Span>
         </>
     );
 }

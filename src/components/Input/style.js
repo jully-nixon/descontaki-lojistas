@@ -10,3 +10,8 @@ export const MyInput = styled.input`
 	color: rgb(54, 53, 53);
 	background-color: #dad8d8;
 `
+export const Span = styled.span`
+	text-align: initial;
+	color: red;
+	padding: 4px 0 2px 2px;
+`
