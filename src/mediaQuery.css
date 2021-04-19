@@ -1,0 +1,9 @@
+@media (max-width: 500px) {
+	.home--options {
+		display: inline-block;
+	}
+	.home--coupons,
+	.home--reports {
+		margin: 0 20px 10px 20px;
+	}
+}

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './style.css';
 import logo from '../../images/logo.png';
 import { Link } from 'react-router-dom';
@@ -17,6 +17,10 @@ const initialFormState = {
 }
 
 export default function Register() {
+    useEffect(() => {
+        document.body.style.backgroundColor = 'rgb(54, 53, 53)'
+    }, []);
+
     let formData = [];
 
     const [form, setForm] = useState(initialFormState);
@@ -40,7 +44,7 @@ export default function Register() {
                 <ArrowBackIosIcon className="register--toGoBack" />
             </Link>
 
-            <Image src={logo} alt="Logo" />
+            <Image src={logo} alt="Logo" width="150px" heigth="150px" />
             <h1 className="register--title">Novo Registro</h1>
             <hr />
 
