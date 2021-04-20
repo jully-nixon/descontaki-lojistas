@@ -3,7 +3,7 @@
 
 ## Descrição do Projeto
 <div>
-<p>Projeto de residência da turma de 3º período de sistemas para internet da Unicap junto com o porto digital. </p>
+<p>Projeto de residência da turma do 3º período, de sistemas para internet da Unicap junto com o porto digital. </p>
 
 <h2>Solução</h2>
 <label>Criar uma nova aplicação que capte e gerencie dados
