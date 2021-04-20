@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import './style.css';
-import logo from '../../images/logo.png';
+import logo from '../../assets/images/logo.png';
 import { Link } from 'react-router-dom';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import Image from '../../components/Image';

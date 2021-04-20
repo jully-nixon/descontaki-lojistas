@@ -3,7 +3,7 @@
 
 ## Descrição do Projeto
 <div>
-<p align="center">Projeto de residência da Unicap junto com o porto digital. </p>
+<p>Projeto de residência da Unicap junto com o porto digital. </p>
 <br>
 <h2>Solução</h2>
 <br>
@@ -14,10 +14,9 @@ cupons de desconto ao usuários, e garantindo que todo o
 processo ocorra na forma da lei.</label>
 <br>
 <h2>Perfil Lojistas</h2>
-<label>Com opções para os lojistas validarem os cupons dos clientes e também gerar alguns relatórios.</label>
+<label>Esse perfil Lojistas tem o objetivo de dar aos lojistas do shopping a opção de  validarem os cupons dos clientes e também gerar alguns relatórios.</label>
 </div>
 
-### O que utilizei
 <h2>O que utilizei</h2>
 <li>ReactJS</li>
 <li>Styled Components</li>

@@ -1,10 +1,10 @@
 import React from 'react';
 import { Logo } from './style';
 
-export default function Image(props) {
+export default function Image({ src, alt, width, height, ...rest }) {
     return (
         <>
-            <Logo src={props.src} alt={props.alt} width={props.width} height={props.height}></Logo>
+            <Logo src={src} alt={alt} width={width} height={height} {...rest}></Logo>
         </>
     );
 }

@@ -1,10 +1,10 @@
 import React from 'react';
 import { MyButton } from './style';
 
-export default function Button(props) {
+export default function Button({ handlerButton, disabled, title, ...rest }) {
     return (
         <>
-            <MyButton onClick={props.handlerButton} disabled={props.disabled}>{props.title}</MyButton>
+            <MyButton onClick={handlerButton} disabled={disabled} {...rest}>{title}</MyButton>
         </>
     );
 }

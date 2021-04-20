@@ -2,8 +2,8 @@ import React, { useEffect } from 'react';
 import './style.css';
 import Menu from '../../components/Menu';
 import Image from '../../components/Image';
-import cupons from '../../images/imgCupons.png';
-import reports from '../../images/reports.png';
+import cupons from '../../assets/images/imgCupons.png';
+import reports from '../../assets/images/reports.png';
 
 export default function Home() {
     useEffect(() => {
