@@ -16,6 +16,6 @@ processo ocorra na forma da lei.</label>
 <label>Esse perfil lojistas tem o objetivo de dar aos lojistas do shopping a opção de  validarem os cupons dos clientes e também gerar alguns relatórios.</label>
 </div>
 
-<h2>O que utilizei</h2>
+### O que utilizei
 <li>ReactJS</li>
 <li>Styled Components</li>
