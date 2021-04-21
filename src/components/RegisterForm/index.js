@@ -13,7 +13,7 @@ const initialFormState = {
     confirmPassword: ''
 }
 
-export default function RegisterForm() {
+const RegisterForm = () => {
     let formData = [];
 
     const [form, setForm] = useState(initialFormState);
@@ -89,3 +89,4 @@ export default function RegisterForm() {
         </>
     );
 }
+export default RegisterForm;

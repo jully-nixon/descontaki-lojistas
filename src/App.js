@@ -2,13 +2,13 @@ import React from 'react';
 import Routes from './routes';
 import { BrowserRouter } from 'react-router-dom';
 
-export default function App() {
-
+const App = () => {
   return (
     <div>
       <BrowserRouter>
-      <Routes />
+        <Routes />
       </BrowserRouter>
     </div>
   )
 }
+export default App;

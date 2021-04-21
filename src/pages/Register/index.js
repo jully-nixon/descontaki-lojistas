@@ -6,7 +6,7 @@ import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import Image from '../../components/Image';
 import Form from '../../components/RegisterForm';
 
-export default function Register() {
+const Register = () => {
     useEffect(() => {
         document.body.style.backgroundColor = 'rgb(54, 53, 53)'
     }, []);
@@ -27,3 +27,4 @@ export default function Register() {
         </div>
     )
 }
+export default Register;

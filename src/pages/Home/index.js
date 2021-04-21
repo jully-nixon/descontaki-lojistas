@@ -5,7 +5,7 @@ import Image from '../../components/Image';
 import cupons from '../../assets/images/imgCupons.png';
 import reports from '../../assets/images/reports.png';
 
-export default function Home() {
+const Home = () => {
     useEffect(() => {
         document.body.style.backgroundColor = '#dad8d8'
     }, []);
@@ -35,3 +35,4 @@ export default function Home() {
 
     );
 }
+export default Home;

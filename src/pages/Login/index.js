@@ -6,7 +6,7 @@ import Input from '../../components/Input';
 import Button from '../../components/Button';
 import Image from '../../components/Image';
 
-export default function Login() {
+const Login = () => {
     useEffect(() => {
         document.body.style.backgroundColor = 'rgb(54, 53, 53)'
     }, []);
@@ -31,3 +31,4 @@ export default function Login() {
         </div>
     )
 }
+export default Login;

@@ -4,7 +4,7 @@ import Register from '../pages/Register';
 import Home from '../pages/Home';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
-export default function Routes() {
+const Routes = () => {
     return (
         <div>
             <BrowserRouter>
@@ -19,3 +19,4 @@ export default function Routes() {
 
     );
 }
+export default Routes;
