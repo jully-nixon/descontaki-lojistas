@@ -1,5 +1,5 @@
 # Nome do Projeto 
-<h1 align="center">Descontaki Logistas</h1>
+<h1>Descontaki Logistas</h1>
 
 ## Descrição do Projeto
 <div>
