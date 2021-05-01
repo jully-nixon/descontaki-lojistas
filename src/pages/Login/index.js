@@ -28,7 +28,14 @@ const Login = ({ history }) => {
     const submitLogin = () => {
         let userRecords = JSON.parse(localStorage.getItem('formData'));
 
-        if (formLogin.email && formLogin.password) {
+        if (!localStorage.getItem('formData') && formLogin.email && formLogin.password) {
+            toast.error('Usuário não cadastrado.', {
+                position: "top-right",
+                autoClose: 3000,
+            });
+        }
+
+        else if (localStorage.getItem('formData') && formLogin.email && formLogin.password) {
             for (let i = 0; i < userRecords.length; i++) {
                 const checkLogin = userRecords.find(val => userRecords[i].email == formLogin.email);
                 if (checkLogin) {
