@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import './style.css';
-import Menu from '../../components/Menu';
+import Header from '../../components/Header';
 import Image from '../../components/Image';
 import cupons from '../../assets/images/imgCupons.png';
 import reports from '../../assets/images/reports.png';
@@ -12,7 +12,7 @@ const Home = () => {
 
     return (
         <div className="home">
-            <Menu />
+            <Header />
             <div className="home--content">
                 <h1 className="home--title">Seja Bem-Vindo(a)!</h1>
                 <hr />

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './style.css';
-import Menu from '../../components/Menu';
+import Header from '../../components/Header';
 import Image from '../../components/Image';
 import Button from '../../components/Button';
 import Input from '../../components/Input';
@@ -33,7 +33,7 @@ const Profile = () => {
 
     return (
         <div className="profile">
-            <Menu />
+            <Header />
             <h1 className="profile--title">Perfil</h1>
             <hr />
             {!edit &&

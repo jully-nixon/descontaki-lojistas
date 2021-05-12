@@ -1,4 +1,7 @@
 @media (max-width: 500px) {
+	.bm-burger-button {
+		margin: 20px 0 0 20px;
+	}
 	.home--options {
 		display: inline-block;
 	}

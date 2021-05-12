@@ -37,7 +37,7 @@ const Login = ({ history }) => {
 
         else if (localStorage.getItem('formData') && formLogin.email && formLogin.password) {
             for (let i = 0; i < userRecords.length; i++) {
-                const checkLogin = userRecords.find(val => userRecords[i].email == formLogin.email);
+                const checkLogin = userRecords.find(val => userRecords[i].email === formLogin.email);
                 if (checkLogin) {
                     history.push('home');
                 } else {
