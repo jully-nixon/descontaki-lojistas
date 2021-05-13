@@ -1,10 +1,10 @@
 import React from 'react';
 import { MyButton } from './style';
 
-const Button = ({ handlerButton, disabled, title, ...rest }) => {
+const Button = ({ handlerButton, disabled, title, width, ...rest }) => {
     return (
         <>
-            <MyButton onClick={handlerButton} disabled={disabled} {...rest}>{title}</MyButton>
+            <MyButton onClick={handlerButton} disabled={disabled} width={width} {...rest}>{title}</MyButton>
         </>
     );
 }

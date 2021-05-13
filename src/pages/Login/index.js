@@ -71,7 +71,7 @@ const Login = ({ history }) => {
                     placeholder="Senha"
                     onChange={e => setInput({ password: e.target.value })}
                 />
-                <Button title="Entrar" handlerButton={submitLogin} />
+                <Button title="Entrar" handlerButton={submitLogin} width="270px" />
 
                 <Link to="/home"></Link>
 

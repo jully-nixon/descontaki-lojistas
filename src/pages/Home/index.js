@@ -4,6 +4,7 @@ import Header from '../../components/Header';
 import Image from '../../components/Image';
 import cupons from '../../assets/images/imgCupons.png';
 import reports from '../../assets/images/reports.png';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
     useEffect(() => {
@@ -22,11 +23,13 @@ const Home = () => {
                         <hr />
                         <strong>Relatórios</strong>
                     </div>
-                    <div className="home--coupons">
-                        <Image src={cupons} alt="cupons" width="100px" heigth="100px" />
-                        <hr />
-                        <strong>Validar Cupons</strong>
-                    </div>
+                    <Link to="/check-coupons">
+                        <div className="home--coupons">
+                            <Image src={cupons} alt="cupons" width="100px" heigth="100px" />
+                            <hr />
+                            <strong>Validar Cupons</strong>
+                        </div>
+                    </Link>
                 </div>
                 <hr />
             </div>
