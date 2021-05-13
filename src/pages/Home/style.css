@@ -11,7 +11,7 @@
 	font-size: 30px;
 	justify-content: center;
 	text-align: center;
-	padding: 100px 0 20px 0;
+	padding: 80px 0 20px 0;
 }
 .home--options {
 	display: inline-flex;
@@ -24,8 +24,10 @@
 	padding: 40px;
 	width: 150px;
 	margin: 0 20px 0 20px;
+	color: rgb(54, 53, 53);
 }
 .home--coupons:hover,
 .home--reports:hover {
 	background-color: rgba(255, 255, 255, 0.281);
 }
+

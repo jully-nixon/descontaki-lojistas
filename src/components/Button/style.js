@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const MyButton = styled.button`
 	font-size: 20px;
-	width: 270px;
 	height: 40px;
 	color: #fff;
 	background-color: #fa4505;

@@ -13,7 +13,7 @@ const Register = () => {
 
     return (
         <div className="register">
-            <Link to="/login">
+            <Link to="/">
                 <ArrowBackIosIcon className="register--toGoBack" />
             </Link>
 
