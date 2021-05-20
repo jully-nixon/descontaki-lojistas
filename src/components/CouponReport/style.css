@@ -1,0 +1,26 @@
+.coupon--report {
+	border: solid 1px;
+	width: 400px;
+	height: 100px;
+	border-radius: 8px;
+	padding: 16px;
+	margin: 12px;
+}
+#title {
+	display: flex;
+    justify-content: initial;
+    margin: 0 0 0 20px;
+}
+#active {
+	display: inline-grid;
+    margin: -20px 0 0 62px;
+    position: absolute;
+}
+#discount {
+	display: flex;
+    margin: 0px 0 0 20px;
+}
+.coupon--report strong {
+	font-size: 20px;
+    margin: 4px;
+}

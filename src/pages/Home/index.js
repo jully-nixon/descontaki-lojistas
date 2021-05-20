@@ -18,11 +18,13 @@ const Home = () => {
                 <h1 className="home--title">Seja Bem-Vindo(a)!</h1>
                 <hr />
                 <div className="home--options">
-                    <div className="home--reports">
-                        <Image src={reports} alt="cupons" width="100px" heigth="100px" />
-                        <hr />
-                        <strong>Relatórios</strong>
-                    </div>
+                    <Link to="/reports">
+                        <div className="home--reports">
+                            <Image src={reports} alt="cupons" width="100px" heigth="100px" />
+                            <hr />
+                            <strong>Relatórios</strong>
+                        </div>
+                    </Link>
                     <Link to="/check-coupons">
                         <div className="home--coupons">
                             <Image src={cupons} alt="cupons" width="100px" heigth="100px" />

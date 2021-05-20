@@ -24,15 +24,16 @@
 .profile--userDados {
 	background: #c7c3c3;
 	border-radius: 0 10px 10px 0px;
-	width: 400px;
+	width: 440px;
 	padding: 0px 0 30px 20px;
-    max-height: 320px;
-    overflow-y: auto;
+	max-height: 350px;
+	overflow-y: auto;
 }
 .profile--edit {
 	position: absolute;
-	padding: 8px 0 0 360px;
+	padding: 12px 0 0 0;
 	cursor: pointer;
+	margin: 0px 0 0 360px;
 }
 .profile--saveEditions {
 	position: absolute;
@@ -46,12 +47,12 @@ h4 {
 	margin: 22px 0 2px 0;
 }
 ::-webkit-scrollbar-track {
-    background-color: #a7a4a4;
+	background-color: #a7a4a4;
 }
 ::-webkit-scrollbar {
-    width: 6px;
-    background: rgb(54, 53, 53);
+	width: 6px;
+	background: rgb(54, 53, 53);
 }
 ::-webkit-scrollbar-thumb {
-    background: rgb(54, 53, 53);
+	background: rgb(54, 53, 53);
 }
