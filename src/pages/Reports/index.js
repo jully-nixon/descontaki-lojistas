@@ -29,7 +29,6 @@ const Reports = () => {
     const [filter, setFilter] = useState(initialFilterState);
     const [optionsGraphic] = useState({
         backgroundColor: 'transparent',
-        textAlign: 'center',
         fontSize: '12'
     });
     const [dataAge] = useState([
