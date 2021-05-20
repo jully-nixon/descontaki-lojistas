@@ -44,11 +44,9 @@ const Reports = () => {
         ['Tarde', 40],
         ['Noite', 100],
     ])
-
     const getFilter = (newValue) => {
         setFilter(filter => ({ ...filter, ...newValue }));
     }
-
     const dataCupons = Information.map((data) => {
         return (
             <CouponReport name={data.name} active={data.active} discount={data.discount} />
