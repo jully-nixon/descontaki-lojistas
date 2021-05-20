@@ -27,18 +27,18 @@ const Reports = () => {
     }, []);
 
     const [filter, setFilter] = useState(initialFilterState);
-    const [optionsGraphic, setOptionsGraphic] = useState({
+    const [optionsGraphic] = useState({
         backgroundColor: 'transparent',
         textAlign: 'center',
         fontSize: '12'
     });
-    const [dataAge, setDataAge] = useState([
+    const [dataAge] = useState([
         ['Idades', 'Quantidade'],
         ['Maior de 18', 100],
         ['Maior que 40', 80],
         ['Menor de 18', 50],
     ]);
-    const [dataSchedule, setdataSchedule] = useState([
+    const [dataSchedule] = useState([
         ['schedules', 'Quantidade'],
         ['Manhã', 30],
         ['Tarde', 40],
@@ -49,9 +49,6 @@ const Reports = () => {
         setFilter(filter => ({ ...filter, ...newValue }));
     }
 
-    const filterReports = () => {
-        console.log(filter.type)
-    }
     const dataCupons = Information.map((data) => {
         return (
             <CouponReport name={data.name} active={data.active} discount={data.discount} />
@@ -73,7 +70,7 @@ const Reports = () => {
                 <Input type="date" onChange={e => getFilter({ startDate: e.target.value })} />
                 <label id="timeCourse">a</label>
                 <Input type="date" onChange={e => getFilter({ endDate: e.target.value })} />
-                <SearchIcon className="reports--search" onClick={filterReports} />
+                <SearchIcon className="reports--search"  />
             </div>
             <hr />
             {filter.type === 'Notas Cadastradas' &&
