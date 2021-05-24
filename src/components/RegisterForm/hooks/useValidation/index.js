@@ -6,7 +6,7 @@ const useValidation = (values, schema) => {
     const [invalid, formInvalid] = useState(true);
 
     useEffect(() => {
-       const validate = async () => {
+        const validate = async () => {
             try {
                 await schema.validate(values, { abortEarly: false });
                 setErrors({});
@@ -19,11 +19,10 @@ const useValidation = (values, schema) => {
                     })
                     setErrors(errors);
                 }
-
             }
         }
         validate()
-    }, [values])
+    }, [values, schema])
 
     return { errors, invalid }
 
