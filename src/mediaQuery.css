@@ -41,4 +41,7 @@
 	::-webkit-scrollbar-thumb {
 		background: none;
 	}
+	.register--toGoBack {
+		display: none !important;
+	}
 }
