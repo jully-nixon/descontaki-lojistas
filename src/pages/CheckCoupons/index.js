@@ -32,7 +32,7 @@ const CheckCoupons = () => {
     const getCoupons = () => {
         const dataCupons = Information;
         const dataFilter = dataCupons.filter(data => data.code === formCoupon.code &&
-            data.cpf == formCoupon.cpf);
+            data.cpf === formCoupon.cpf);
         if (dataFilter.length) {
             setCoupon({
                 cpf: `${dataFilter[0].cpf}`,
