@@ -9,6 +9,12 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 toast.configure();
+
+const initialFormCouponState = {
+    code: '',
+    cpf: '',
+}
+
 const CheckCoupons = () => {
     useEffect(() => {
         document.body.style.backgroundColor = '#dad8d8'
@@ -16,14 +22,14 @@ const CheckCoupons = () => {
 
     const [coupon, setCoupon] = useState({});
     const [showCoupon, setShowCoupon] = useState(false);
-    const [codeCoupon, setCodeCoupon] = useState('');
+    const [formCoupon, setFormCoupon] = useState(initialFormCouponState);
 
-    const getCodeCoupon = (e) => {
-        setCodeCoupon(e.target.value);
+    const getCodeAndCPFCoupon = (newValue) => {
+        setFormCoupon(formCoupon => ({ ...formCoupon, ...newValue }));
     }
 
     const getCoupons = () => {
-        if (codeCoupon === '0000') {
+        if (formCoupon.code === '0000' && formCoupon.cpf === '87845678456') {
             setCoupon({
                 cpf: '87845678456',
                 nome: 'Larissa Renata Lins',
@@ -31,14 +37,25 @@ const CheckCoupons = () => {
                 desconto: '50%'
             });
             setShowCoupon(true);
+        } else if (formCoupon.code !== '' && formCoupon.cpf === '') {
+            toast.error('Campo CPF obrigatório', {
+                position: "top-right",
+                autoClose: 3000,
+            });
+        } else if (formCoupon.code === '' && formCoupon.cpf !== '') {
+            toast.error('Campo code obrigatório', {
+                position: "top-right",
+                autoClose: 3000,
+            });
         } else {
+            setShowCoupon(false);
             toast.error('Cupom não encontrado', {
                 position: "top-right",
                 autoClose: 3000,
             });
         }
     }
-    
+
     const useCoupon = () => {
         setCoupon({});
         toast.success('Cupom aplicado com sucesso!', {
@@ -46,7 +63,7 @@ const CheckCoupons = () => {
             autoClose: 3000,
         });
         setShowCoupon(false);
-        document.getElementById('code').value = '';
+        setFormCoupon({});
     }
 
     return (
@@ -55,8 +72,12 @@ const CheckCoupons = () => {
             <div className="coupons--content">
                 <h1 className="checkCoupons--title">Verificar Cupom</h1>
                 <hr />
-                <label className="coupons--code">Código do cupom: <Input id="code" type="text" onChange={getCodeCoupon} />
-                    <SearchIcon className="coupons--search" onClick={getCoupons} /></label>
+                <label className="coupons--code">Código do cupom: <Input id="code" type="text"
+                    onChange={e => getCodeAndCPFCoupon({ code: e.target.value })} /></label>
+                <br />
+                <label className="coupons--code">CPF: <Input id="code" type="text"
+                    onChange={e => getCodeAndCPFCoupon({ cpf: e.target.value })} /></label>
+                <SearchIcon className="coupons--search" onClick={getCoupons} />
                 <div className="coupons--result">
                     {showCoupon &&
                         <Coupon cpf={coupon.cpf} nome={coupon.nome}
