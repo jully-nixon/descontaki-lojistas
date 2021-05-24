@@ -21,5 +21,5 @@ hr {
 }
 button:disabled,
 button[disabled] {
-	opacity: 30%;
+	background-color: #f7835a;
 }
