@@ -26,9 +26,13 @@
 	border: 1px solid;
 }
 .coupons--search {
+	width: 82px !important;
+	height: 34px !important;
 	position: absolute;
-	width: 30px !important;
-	height: 30px !important;
-	margin: 16px 0px 0px -34px;
+	background-color: #fa4505;
+	color: #fff;
+	border-radius: 4px;
+	margin: 10px 0 0 4px;
+	padding: 4px;
 	cursor: pointer;
 }
