@@ -7,6 +7,7 @@ import './style.css';
 import SearchIcon from '@material-ui/icons/Search';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Information from '../../MockJson';
 
 toast.configure();
 
@@ -29,12 +30,15 @@ const CheckCoupons = () => {
     }
 
     const getCoupons = () => {
-        if (formCoupon.code === '0000' && formCoupon.cpf === '87845678456') {
+        const dataCupons = Information;
+        const dataFilter = dataCupons.filter(data => data.code === formCoupon.code &&
+            data.cpf == formCoupon.cpf);
+        if (dataFilter.length) {
             setCoupon({
-                cpf: '87845678456',
-                nome: 'Larissa Renata Lins',
-                nomeDoCupom: 'Dia das Mães',
-                desconto: '50%'
+                cpf: `${dataFilter[0].cpf}`,
+                nome: `${dataFilter[0].nameClient}`,
+                nomeDoCupom: `${dataFilter[0].name}`,
+                desconto: `${dataFilter[0].discount}`
             });
             setShowCoupon(true);
         } else if (formCoupon.code !== '' && formCoupon.cpf === '') {
