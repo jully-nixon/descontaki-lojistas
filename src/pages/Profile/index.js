@@ -10,6 +10,7 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 toast.configure();
+
 const Profile = () => {
     const [edit, editShow] = useState(false);
 
@@ -18,6 +19,9 @@ const Profile = () => {
     }, []);
 
     let userRecords = JSON.parse(localStorage.getItem('formData'));
+    const loggedInUser = localStorage.getItem('loggedInUser');
+
+    const userFilter = userRecords.filter(data => data.email === loggedInUser)[0];
 
     const editProfile = () => {
         editShow(true);
@@ -44,16 +48,16 @@ const Profile = () => {
                     <div className="profile--userDados">
                         <Image className="profile--edit" src={imgEditProfile} alt="edit" width="24px" heigth="24px" onClick={editProfile} />
                         <h4>CNPJ</h4>
-                        <label>{userRecords[0].cnpj}</label>
+                        <label>{userFilter.cnpj}</label>
 
                         <h4>Razão Social</h4>
-                        <label>{userRecords[0].razaoSocial}</label>
+                        <label>{userFilter.razaoSocial}</label>
 
                         <h4>Nome Fantasia</h4>
-                        <label>{userRecords[0].nomeFantasia}</label>
+                        <label>{userFilter.nomeFantasia}</label>
 
                         <h4>E-mail</h4>
-                        <label>{userRecords[0].email}</label>
+                        <label>{userFilter.email}</label>
                     </div>
                 </div>
             }
@@ -67,16 +71,25 @@ const Profile = () => {
                             <Button title="Salvar" handlerButton={saveEditions} />
                         </div>
                         <h4>CNPJ</h4>
-                        <Input type="text" defaultValue={userRecords[0].cnpj} />
+                        <Input type="text" defaultValue={userFilter.cnpj} />
 
                         <h4>Razão Social</h4>
-                        <Input type="text" defaultValue={userRecords[0].razaoSocial} />
+                        <Input type="text" defaultValue={userFilter.razaoSocial} />
 
                         <h4>Nome Fantasia</h4>
-                        <Input type="text" defaultValue={userRecords[0].nomeFantasia} />
+                        <Input type="text" defaultValue={userFilter.nomeFantasia} />
 
                         <h4>E-mail</h4>
-                        <Input type="text" defaultValue={userRecords[0].email} />
+                        <Input type="text" defaultValue={userFilter.email} />
+
+                        <h4>Senha atual</h4>
+                        <Input type="text" />
+
+                        <h4>Nova senha</h4>
+                        <Input type="text" />
+
+                        <h4>Confirmar senha</h4>
+                        <Input type="text" />
                     </div>
                 </div>
             }

@@ -27,6 +27,7 @@ const Login = ({ history }) => {
 
     const submitLogin = () => {
         let userRecords = JSON.parse(localStorage.getItem('formData'));
+        localStorage.setItem('loggedInUser', formLogin.email)
 
         if (!localStorage.getItem('formData') && formLogin.email && formLogin.password) {
             toast.error('Usuário não cadastrado.', {
@@ -65,7 +66,7 @@ const Login = ({ history }) => {
             <div className="login--content">
                 <Input type="text"
                     placeholder="Email"
-                    onChange={e => setInput({ email: e.target.value })}
+                    onChange={e => setInput({ email: e.target.value }) }
                 />
                 <Input type="password"
                     placeholder="Senha"

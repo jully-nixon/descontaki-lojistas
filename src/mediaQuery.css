@@ -26,7 +26,6 @@
 	}
 	input {
 		border: solid 1px rgb(54, 53, 53) !important;
-		width: 90% !important;
 	}
 	::-webkit-scrollbar-track {
 		background-color: none;
