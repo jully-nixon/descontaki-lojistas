@@ -21,7 +21,10 @@ const Profile = () => {
     let userRecords = JSON.parse(localStorage.getItem('formData'));
     const loggedInUser = localStorage.getItem('loggedInUser');
 
-    const userFilter = userRecords.filter(data => data.email === loggedInUser)[0];
+    let userFilter = {};
+    if (loggedInUser) {
+        userFilter = userRecords.filter(data => data.email === loggedInUser)[0];
+    }
 
     const editProfile = () => {
         editShow(true);

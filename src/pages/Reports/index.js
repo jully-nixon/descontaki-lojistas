@@ -42,15 +42,15 @@ const Reports = () => {
         ['Manhã', 30],
         ['Tarde', 40],
         ['Noite', 100],
-    ])
+    ]);
     const getFilter = (newValue) => {
         setFilter(filter => ({ ...filter, ...newValue }));
     }
-    const dataCupons = Information.map((data) => {
+    const dataCupons = Information.map((coupon) => {
         return (
-            <CouponReport name={data.name} active={data.active} discount={data.discount} />
+            <CouponReport key={coupon.id} name={coupon.name} active={coupon.active} discount={coupon.discount} />
         );
-    })
+    });
 
     return (
         <div className="reports">
@@ -67,7 +67,7 @@ const Reports = () => {
                 <Input type="date" onChange={e => getFilter({ startDate: e.target.value })} />
                 <label id="timeCourse">a</label>
                 <Input type="date" onChange={e => getFilter({ endDate: e.target.value })} />
-                <SearchIcon className="reports--search"  />
+                <SearchIcon className="reports--search" />
             </div>
             <hr />
             {filter.type === 'Notas Cadastradas' &&

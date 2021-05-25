@@ -17,6 +17,9 @@
 	display: inline-flex;
 	padding: 20px 0px 20px 0px;
 }
+.home--options strong {
+	font-size: 18px;
+}
 .home--coupons,
 .home--reports {
 	border: 2px solid #fa4505;
@@ -30,4 +33,3 @@
 .home--reports:hover {
 	background-color: rgba(255, 255, 255, 0.281);
 }
-
