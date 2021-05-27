@@ -4,13 +4,13 @@ const Information = [
         "code": '0000',
         "cpf": '08556745646',
         "nameClient": 'Larissa Renata Lins',
-        "name": 'Mês dos pais',
+        "name": 'Mês das mães',
         "active": '60',
-        "discount": '50%'
+        "discount": '80%'
     },
     {
         "id": 2,
-        "code": '0001',
+        "code": '0000',
         "cpf": '09556745646',
         "nameClient": 'Amanda da Silva Lopes',
         "name": 'Mês das mães',

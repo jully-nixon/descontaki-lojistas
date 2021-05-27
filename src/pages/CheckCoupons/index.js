@@ -68,6 +68,8 @@ const CheckCoupons = () => {
         });
         setShowCoupon(false);
         setFormCoupon({});
+        document.getElementById('code').value='';
+        document.getElementById('cpf').value='';
     }
 
     return (
@@ -79,7 +81,7 @@ const CheckCoupons = () => {
                 <label className="coupons--code">Código do cupom: <Input id="code" type="text"
                     onChange={e => getCodeAndCPFCoupon({ code: e.target.value })} /></label>
                 <br />
-                <label className="coupons--code">CPF: <Input id="code" type="text"
+                <label className="coupons--code">CPF: <Input id="cpf" type="text"
                     onChange={e => getCodeAndCPFCoupon({ cpf: e.target.value })} /></label>
                 <SearchIcon className="coupons--search" onClick={getCoupons} />
                 <div className="coupons--result">
