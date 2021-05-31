@@ -48,3 +48,17 @@
 		background: none;
 	}
 }
+@media only screen and (max-width: 480px) {
+	.Toastify__toast {
+		border-radius: 2px;
+		width: 90%;
+		position: absolute;
+		top: 30px;
+		left: 5%;
+		/* transform: translate(-50%, -50%); */
+	}
+	.Toastify__toast--success {
+		width: 100%;
+		left: 9%;
+	}
+}
