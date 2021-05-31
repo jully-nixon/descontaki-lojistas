@@ -55,7 +55,6 @@
 		position: absolute;
 		top: 30px;
 		left: 5%;
-		/* transform: translate(-50%, -50%); */
 	}
 	.Toastify__toast--success {
 		width: 100%;
