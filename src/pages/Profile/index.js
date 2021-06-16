@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import './style.css';
 import Header from '../../components/Header';
 import Image from '../../components/Image';
@@ -8,22 +8,25 @@ import logo from '../../assets/images/logo.png';
 import imgEditProfile from '../../assets/images/edit.svg';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { AuthContext } from '../../services/auth';
 
 toast.configure();
 
 const Profile = () => {
+    const authContext = useContext(AuthContext);
+
     const [edit, editShow] = useState(false);
 
     useEffect(() => {
         document.body.style.backgroundColor = '#dad8d8'
     }, []);
 
-    let userRecords = JSON.parse(localStorage.getItem('formData'));
+    let userRecord = authContext;
     const loggedInUser = localStorage.getItem('loggedInUser');
 
     let userFilter = {};
     if (loggedInUser) {
-        userFilter = userRecords.filter(data => data.email === loggedInUser)[0];
+        userFilter = userRecord.email === loggedInUser;
     }
 
     const editProfile = () => {

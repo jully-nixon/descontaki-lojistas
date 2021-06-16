@@ -14,12 +14,12 @@ export const FormValidations = yup.object().shape({
         .string()
         .email("Email is invalid")
         .required('*Email obrigatório'),
-    password: yup
+    senha: yup
         .string()
         .min(8, 'Minimo 8 caracteres')
         .max(14, 'Máximo 14 caracteres')
         .required('*Senha obrigatório'),
-    confirmPassword: yup
+    confirmarSenha: yup
         .string()
         .min(8, 'Minimo 8 caracteres')
         .max(14, 'Máximo 14 caracteres')
